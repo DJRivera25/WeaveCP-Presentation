@@ -14,10 +14,10 @@ import PricingSection from "@/components/PricingSection";
 import FloatingNav from "@/components/FloatingNav";
 
 export const metadata: Metadata = {
-  title: "WeaveCP Architectural Firm - Complete Platform Available",
+  title: "WeaveCP Website Solution - Complete & Ready for Deployment",
   description:
-    "The WeaveCP architectural firm platform is complete and ready for deployment. A comprehensive business management system with public website, employee portal, and admin tools.",
-  keywords: "architectural firm, web development, Next.js, completed project, business automation, ready to deploy",
+    "Complete website solution for WeaveCP outsourcing architectural services. Professional 9-page website with CMS, built with modern technology and ready for immediate deployment.",
+  keywords: "WeaveCP, architectural services, website solution, Next.js, CMS, professional website, ready to deploy",
 };
 
 export default function Home() {

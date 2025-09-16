@@ -20,11 +20,11 @@ export default function HostingCostSection() {
             <CloudIcon className="w-8 h-8 text-green-600" />
           </div>
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 sm:mb-6">
-            Hosting Costs: Start with <span className="text-green-600">₱0/month</span>
+            Deployment: <span className="text-green-600">FREE to Start</span>
           </h2>
           <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto px-2">
-            For a public website + CMS, you can start completely FREE and only upgrade when you actually need it. No
-            upfront hosting costs required!
+            Your WeaveCP website can be deployed completely FREE using free hosting tiers. Only upgrade when you
+            actually need more resources!
           </p>
         </motion.div>
 
@@ -221,7 +221,9 @@ export default function HostingCostSection() {
           <div className="mt-8 bg-gradient-to-r from-green-500 to-blue-500 rounded-xl p-6 text-white text-center">
             <h4 className="text-xl font-bold mb-2">Your Investment Value</h4>
             <div className="text-3xl font-bold mb-2">₱170,000</div>
-            <p className="text-green-100">Complete professional website with ongoing control and independence!</p>
+            <p className="text-green-100">
+              Complete professional website for WeaveCP with full control and independence!
+            </p>
           </div>
         </motion.div>
 
@@ -306,19 +308,19 @@ export default function HostingCostSection() {
           viewport={{ once: true }}
           className="mt-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white text-center"
         >
-          <h3 className="text-2xl font-bold mb-4">The Bottom Line</h3>
+          <h3 className="text-2xl font-bold mb-4">WeaveCP Investment Summary</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div>
               <div className="text-3xl font-bold mb-2">₱170,000</div>
-              <div className="text-blue-100">Complete solution (one-time)</div>
+              <div className="text-blue-100">Website development (one-time)</div>
             </div>
             <div>
               <div className="text-3xl font-bold mb-2">₱0</div>
-              <div className="text-blue-100">Monthly hosting (free tier)</div>
+              <div className="text-blue-100">Hosting costs (free deployment)</div>
             </div>
             <div>
               <div className="text-3xl font-bold mb-2">₱800</div>
-              <div className="text-blue-100">Annual domain cost</div>
+              <div className="text-blue-100">Domain cost (annual)</div>
             </div>
           </div>
           <p className="text-blue-100 mt-6 text-lg">

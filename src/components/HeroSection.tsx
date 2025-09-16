@@ -30,7 +30,7 @@ export default function HeroSection() {
           <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-3">
             WeaveCP
             <span className="block text-lg sm:text-xl md:text-2xl lg:text-3xl font-normal text-blue-200 mt-1">
-              Your Website Solution is Ready!
+              Website Solution Complete!
             </span>
           </h1>
         </motion.div>
@@ -43,10 +43,10 @@ export default function HeroSection() {
           className="mb-12"
         >
           <h2 className="text-sm sm:text-base md:text-lg lg:text-xl text-blue-100 mb-6 max-w-4xl mx-auto leading-relaxed px-2">
-            Transform your outsourcing architectural service company with a{" "}
-            <span className="text-yellow-300 font-semibold">complete professional website</span> and{" "}
+            Your complete website solution is ready! A{" "}
+            <span className="text-yellow-300 font-semibold">professional 9-page website</span> and{" "}
             <span className="text-purple-300 font-semibold">full content management system</span> - built with modern
-            technology for competitive pricing
+            technology for WeaveCP&apos;s outsourcing architectural services
           </h2>
 
           {/* Desktop Grid */}

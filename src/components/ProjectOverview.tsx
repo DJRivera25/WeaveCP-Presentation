@@ -65,8 +65,8 @@ export default function ProjectOverview() {
             Project Overview
           </h2>
           <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed px-2">
-            A comprehensive architectural firm management platform that combines a professional public website with
-            powerful internal business tools for team productivity and client management.
+            A complete website solution built for WeaveCP&apos;s outsourcing architectural services, combining a
+            professional public website with powerful internal business management tools.
           </p>
         </motion.div>
 
