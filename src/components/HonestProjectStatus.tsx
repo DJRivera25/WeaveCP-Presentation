@@ -44,7 +44,7 @@ export default function HonestProjectStatus() {
 
   return (
     <section className="py-6 sm:py-8 md:py-12 lg:py-16 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-2 sm:px-4 md:px-6 lg:px-8">
+      <div className="w-full mx-auto px-2 sm:px-4 md:px-6 lg:px-8">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}

@@ -10,13 +10,13 @@ export default function HeroSection() {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-900 via-blue-800 to-indigo-900">
+    <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-900 via-blue-800 to-indigo-900 pb-20 md:pb-0">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0 bg-gradient-to-br from-blue-800/20 to-indigo-800/20"></div>
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-2 sm:px-4 lg:px-8 text-center">
+      <div className="relative z-10 w-full mx-auto px-2 sm:px-4 md:px-6 lg:px-8 text-center pt-4 pb-24 md:pb-4">
         {/* Logo/Brand */}
         <motion.div
           initial={{ opacity: 0, y: -50 }}
@@ -43,14 +43,14 @@ export default function HeroSection() {
           className="mb-12"
         >
           <h2 className="text-sm sm:text-base md:text-lg lg:text-xl text-blue-100 mb-6 max-w-4xl mx-auto leading-relaxed px-2">
-            Transform your architectural firm with a{" "}
+            Transform your outsourcing architectural service company with a{" "}
             <span className="text-yellow-300 font-semibold">complete professional website</span> and{" "}
             <span className="text-purple-300 font-semibold">full content management system</span> - built with modern
             technology for competitive pricing
           </h2>
 
           {/* Desktop Grid */}
-          <div className="hidden md:grid grid-cols-3 gap-6 max-w-4xl mx-auto mb-6">
+          <div className="hidden md:grid grid-cols-3 gap-6 mx-auto mb-6">
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
               <h3 className="text-white font-semibold text-lg mb-1">Professional Website</h3>
               <p className="text-blue-200 text-sm">9 pages with service showcases and team profiles</p>
@@ -99,17 +99,17 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="flex flex-col sm:flex-row gap-4 justify-center mb-16"
+          className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center mb-12"
         >
           <button
             onClick={scrollToOverview}
-            className="bg-white text-blue-900 px-8 py-4 rounded-full font-semibold text-lg hover:bg-blue-50 transition-all duration-300 transform hover:scale-105 shadow-lg"
+            className="bg-white text-blue-900 px-6 py-2 sm:py-3 md:py-4 rounded-full font-semibold text-sm sm:text-base md:text-lg hover:bg-blue-50 transition-all duration-300 transform hover:scale-105 shadow-lg w-48 sm:w-auto"
           >
             See The Solution
           </button>
           <button
             onClick={() => document.getElementById("pricing")?.scrollIntoView({ behavior: "smooth" })}
-            className="border-2 border-white text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white hover:text-blue-900 transition-all duration-300 transform hover:scale-105"
+            className="border-2 border-white text-white px-6 py-2 sm:py-3 md:py-4 rounded-full font-semibold text-sm sm:text-base md:text-lg hover:bg-white hover:text-blue-900 transition-all duration-300 transform hover:scale-105 w-48 sm:w-auto"
           >
             Compare Investment
           </button>
@@ -133,9 +133,9 @@ export default function HeroSection() {
         </motion.div>
       </div>
 
-      {/* Decorative Elements */}
-      <div className="absolute top-20 left-20 w-32 h-32 bg-blue-400/20 rounded-full blur-xl"></div>
-      <div className="absolute bottom-20 right-20 w-48 h-48 bg-purple-400/20 rounded-full blur-xl"></div>
+      {/* Decorative Elements - Hidden on mobile to prevent overflow */}
+      <div className="hidden md:block absolute top-20 left-20 w-32 h-32 bg-blue-400/20 rounded-full blur-xl"></div>
+      <div className="hidden md:block absolute bottom-20 right-20 w-48 h-48 bg-purple-400/20 rounded-full blur-xl"></div>
     </section>
   );
 }

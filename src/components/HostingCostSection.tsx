@@ -6,8 +6,8 @@ import { CheckCircleIcon, CloudIcon, ArrowUpIcon } from "@heroicons/react/24/out
 
 export default function HostingCostSection() {
   return (
-    <section className="py-20 bg-gradient-to-br from-green-50 to-blue-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-6 sm:py-10 md:py-16 lg:py-20 bg-gradient-to-br from-green-50 to-blue-50">
+      <div className="w-full mx-auto px-2 sm:px-4 md:px-6 lg:px-8">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -19,10 +19,10 @@ export default function HostingCostSection() {
           <div className="inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-6">
             <CloudIcon className="w-8 h-8 text-green-600" />
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 sm:mb-6">
             Hosting Costs: Start with <span className="text-green-600">₱0/month</span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto px-2">
             For a public website + CMS, you can start completely FREE and only upgrade when you actually need it. No
             upfront hosting costs required!
           </p>
@@ -36,7 +36,9 @@ export default function HostingCostSection() {
           viewport={{ once: true }}
           className="mb-16"
         >
-          <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">Free Tiers Are Perfect for Your Needs</h3>
+          <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-900 mb-6 sm:mb-8 text-center">
+            Free Tiers Are Perfect for Your Needs
+          </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {hostingServices.map((service, index) => (
               <motion.div
@@ -85,7 +87,9 @@ export default function HostingCostSection() {
           viewport={{ once: true }}
           className="mb-16"
         >
-          <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">What&apos;s Right for Your Firm Size?</h3>
+          <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-900 mb-6 sm:mb-8 text-center">
+            What&apos;s Right for Your Company Size?
+          </h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {usageScenarios.map((scenario, index) => (
               <motion.div
@@ -141,12 +145,16 @@ export default function HostingCostSection() {
           viewport={{ once: true }}
           className="bg-white rounded-2xl p-8 shadow-lg"
         >
-          <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">Complete Cost Breakdown</h3>
+          <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-900 mb-6 sm:mb-8 text-center">
+            WeaveCP Solution Costs
+          </h3>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {/* Year 1 */}
             <div>
-              <h4 className="text-lg font-semibold text-gray-900 mb-4">First Year Costs</h4>
+              <h4 className="text-sm sm:text-base md:text-lg font-semibold text-gray-900 mb-3 sm:mb-4">
+                WeaveCP Investment
+              </h4>
               <div className="space-y-4">
                 <div className="bg-green-50 p-4 rounded-lg border border-green-200">
                   <h5 className="font-medium text-green-800 mb-2">Our Solution</h5>
@@ -169,30 +177,6 @@ export default function HostingCostSection() {
                       <span>Total Year 1:</span>
                       <span className="text-green-600">
                         ${totalCostComparison.year1.ourSolution.total.toLocaleString()}
-                      </span>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="bg-red-50 p-4 rounded-lg border border-red-200">
-                  <h5 className="font-medium text-red-800 mb-2">Your Current Situation</h5>
-                  <div className="text-sm text-gray-600 space-y-1">
-                    <div className="flex justify-between">
-                      <span>Already Paid:</span>
-                      <span className="font-medium">
-                        ${totalCostComparison.year1.theirCurrent.alreadyPaid.toLocaleString()}
-                      </span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span>Developer Fees:</span>
-                      <span className="font-medium">
-                        ${totalCostComparison.year1.theirCurrent.developerFees.toLocaleString()}
-                      </span>
-                    </div>
-                    <div className="flex justify-between border-t pt-2 font-bold">
-                      <span>Total Year 1:</span>
-                      <span className="text-red-600">
-                        ${totalCostComparison.year1.theirCurrent.total.toLocaleString()}
                       </span>
                     </div>
                   </div>
@@ -226,22 +210,6 @@ export default function HostingCostSection() {
                     <div className="flex justify-between border-t pt-2 font-bold">
                       <span>Annual Cost:</span>
                       <span className="text-green-600">${totalCostComparison.year2and3.ourSolution.total}</span>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="bg-red-50 p-4 rounded-lg border border-red-200">
-                  <h5 className="font-medium text-red-800 mb-2">Continuing Current Approach</h5>
-                  <div className="text-sm text-gray-600 space-y-1">
-                    <div className="flex justify-between">
-                      <span>Developer Fees:</span>
-                      <span className="font-medium">
-                        ${totalCostComparison.year2and3.theirCurrent.developerFees.toLocaleString()}
-                      </span>
-                    </div>
-                    <div className="flex justify-between border-t pt-2 font-bold">
-                      <span>Annual Cost:</span>
-                      <span className="text-red-600">${totalCostComparison.year2and3.theirCurrent.total}</span>
                     </div>
                   </div>
                 </div>

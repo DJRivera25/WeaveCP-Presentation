@@ -22,34 +22,35 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
+    <>
       <FloatingNav />
+      <main className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
+        {/* Hero Section */}
+        <section id="hero" className="min-h-screen">
+          <HeroSection />
+        </section>
 
-      {/* Hero Section */}
-      <section id="hero" className="min-h-screen">
-        <HeroSection />
-      </section>
+        {/* Project Overview */}
+        <section id="overview" className="min-h-screen pt-20">
+          <ProjectOverview />
+          <ActualProjectSection />
+        </section>
 
-      {/* Project Overview */}
-      <section id="overview" className="min-h-screen">
-        <ProjectOverview />
-        <ActualProjectSection />
-      </section>
+        {/* Features Showcase */}
+        <section id="features" className="min-h-screen pt-20">
+          <FeaturesShowcase />
+          <HonestProjectStatus />
+          <TechnicalStack />
+        </section>
 
-      {/* Features Showcase */}
-      <section id="features" className="min-h-screen">
-        <FeaturesShowcase />
-        <HonestProjectStatus />
-        <TechnicalStack />
-      </section>
-
-      {/* Pricing */}
-      <section id="pricing" className="min-h-screen">
-        <PricingSection />
-        <AdditionalFeaturesSection />
-        <HourlyRateSection />
-        <HostingCostSection />
-      </section>
-    </main>
+        {/* Pricing */}
+        <section id="pricing" className="min-h-screen pt-20">
+          <PricingSection />
+          <AdditionalFeaturesSection />
+          <HourlyRateSection />
+          <HostingCostSection />
+        </section>
+      </main>
+    </>
   );
 }

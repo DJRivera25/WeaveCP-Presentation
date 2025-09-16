@@ -21,8 +21,8 @@ export default function ActualProjectSection() {
   const bonusBuiltFeatures = actualFeatures.filter((f) => bonusFeatures.includes(f.name));
 
   return (
-    <section className="py-20 bg-gradient-to-br from-red-50 via-orange-50 to-yellow-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-6 sm:py-10 md:py-16 lg:py-20 bg-gradient-to-br from-red-50 via-orange-50 to-yellow-50">
+      <div className="w-full mx-auto px-2 sm:px-4 md:px-6 lg:px-8">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -34,7 +34,9 @@ export default function ActualProjectSection() {
           <div className="inline-flex items-center justify-center w-16 h-16 bg-red-100 rounded-full mb-6">
             <ExclamationTriangleIcon className="w-8 h-8 text-red-600" />
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Common Website Challenges</h2>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 sm:mb-6">
+            Common Website Challenges
+          </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Many architectural firms face similar challenges with their websites. Here&apos;s how we can solve these
             common problems with a comprehensive solution.

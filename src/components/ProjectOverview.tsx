@@ -51,8 +51,8 @@ export default function ProjectOverview() {
   ];
 
   return (
-    <section id="overview" className="py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-2 sm:px-4 md:px-6 lg:px-8">
+    <section className="py-6 sm:py-10 md:py-16 lg:py-20 bg-white">
+      <div className="w-full mx-auto px-2 sm:px-4 md:px-6 lg:px-8">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -61,57 +61,61 @@ export default function ProjectOverview() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Project Overview</h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 sm:mb-6">
+            Project Overview
+          </h2>
+          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed px-2">
             A comprehensive architectural firm management platform that combines a professional public website with
             powerful internal business tools for team productivity and client management.
           </p>
         </motion.div>
 
-        {/* Key Stats */}
+        {/* Key Stats - COMPACT */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
+          transition={{ duration: 0.5 }}
           viewport={{ once: true }}
-          className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16"
+          className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 mb-8 sm:mb-12"
         >
-          <div className="text-center">
-            <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">15+</div>
-            <div className="text-gray-600">User Stories</div>
+          <div className="text-center p-2 bg-blue-50 rounded-lg">
+            <div className="text-lg sm:text-xl md:text-2xl font-bold text-blue-600 mb-1">15+</div>
+            <div className="text-xs sm:text-sm text-gray-600">User Stories</div>
           </div>
-          <div className="text-center">
-            <div className="text-3xl md:text-4xl font-bold text-green-600 mb-2">12+</div>
-            <div className="text-gray-600">API Endpoints</div>
+          <div className="text-center p-2 bg-green-50 rounded-lg">
+            <div className="text-lg sm:text-xl md:text-2xl font-bold text-green-600 mb-1">12+</div>
+            <div className="text-xs sm:text-sm text-gray-600">API Endpoints</div>
           </div>
-          <div className="text-center">
-            <div className="text-3xl md:text-4xl font-bold text-purple-600 mb-2">440+</div>
-            <div className="text-gray-600">Development Hours</div>
+          <div className="text-center p-2 bg-purple-50 rounded-lg">
+            <div className="text-lg sm:text-xl md:text-2xl font-bold text-purple-600 mb-1">440+</div>
+            <div className="text-xs sm:text-sm text-gray-600">Dev Hours</div>
           </div>
-          <div className="text-center">
-            <div className="text-3xl md:text-4xl font-bold text-orange-600 mb-2">6</div>
-            <div className="text-gray-600">Development Phases</div>
+          <div className="text-center p-2 bg-orange-50 rounded-lg">
+            <div className="text-lg sm:text-xl md:text-2xl font-bold text-orange-600 mb-1">6</div>
+            <div className="text-xs sm:text-sm text-gray-600">Phases</div>
           </div>
         </motion.div>
 
-        {/* Feature Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {/* Feature Grid - COMPACT 2-CARDS PER ROW */}
+        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-2 sm:gap-3 md:gap-4">
           {features.map((feature, index) => (
             <motion.div
               key={feature.title}
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: index * 0.1 }}
+              transition={{ duration: 0.5, delay: index * 0.05 }}
               viewport={{ once: true }}
-              className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100"
+              className="bg-white rounded-lg p-2 sm:p-3 shadow-md border border-gray-100"
             >
-              <div
-                className={`w-16 h-16 rounded-lg bg-gradient-to-r ${feature.color} flex items-center justify-center mb-6`}
-              >
-                <feature.icon className="w-8 h-8 text-white" />
+              <div className="flex items-center mb-1 sm:mb-2">
+                <div
+                  className={`w-5 h-5 sm:w-6 sm:h-6 rounded bg-gradient-to-r ${feature.color} flex items-center justify-center mr-2`}
+                >
+                  <feature.icon className="w-2.5 h-2.5 sm:w-3 sm:h-3 text-white" />
+                </div>
+                <h3 className="text-xs sm:text-sm font-semibold text-gray-900 leading-tight">{feature.title}</h3>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">{feature.title}</h3>
-              <p className="text-gray-600 leading-relaxed">{feature.description}</p>
+              <p className="text-xs text-gray-600 leading-tight">{feature.description}</p>
             </motion.div>
           ))}
         </div>
