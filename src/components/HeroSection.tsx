@@ -16,7 +16,7 @@ export default function HeroSection() {
         <div className="absolute inset-0 bg-gradient-to-br from-blue-800/20 to-indigo-800/20"></div>
       </div>
 
-      <div className="relative z-10 w-full mx-auto px-2 sm:px-4 md:px-6 lg:px-8 text-center pt-4 pb-24 md:pb-4">
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12 text-center pt-4 pb-24 md:pb-4">
         {/* Logo/Brand */}
         <motion.div
           initial={{ opacity: 0, y: -50 }}
@@ -65,31 +65,25 @@ export default function HeroSection() {
             </div>
           </div>
 
-          {/* Mobile Carousel */}
-          <div className="md:hidden mb-6 px-2">
-            <div className="flex overflow-x-auto space-x-3 pb-4 scrollbar-hide">
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3 border border-white/20 flex-shrink-0 w-48">
+          {/* Mobile Grid - No Horizontal Scroll */}
+          <div className="md:hidden mb-6">
+            <div className="grid grid-cols-2 gap-3 px-2">
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3 border border-white/20">
                 <h3 className="text-white font-semibold text-sm mb-1">Professional Website</h3>
                 <p className="text-blue-200 text-xs">9 pages with service showcases</p>
               </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3 border border-white/20 flex-shrink-0 w-48">
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3 border border-white/20">
                 <h3 className="text-white font-semibold text-sm mb-1">Content Management</h3>
                 <p className="text-blue-200 text-xs">Update content yourself</p>
               </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3 border border-white/20 flex-shrink-0 w-48">
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3 border border-white/20">
                 <h3 className="text-white font-semibold text-sm mb-1">Fast Delivery</h3>
                 <p className="text-blue-200 text-xs">Ready for deployment</p>
               </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3 border border-white/20 flex-shrink-0 w-48">
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3 border border-white/20">
                 <h3 className="text-white font-semibold text-sm mb-1">Full Control</h3>
                 <p className="text-blue-200 text-xs">No ongoing dependencies</p>
               </div>
-            </div>
-            <div className="flex justify-center space-x-1 mt-2">
-              <div className="w-2 h-2 bg-white/50 rounded-full"></div>
-              <div className="w-2 h-2 bg-white/30 rounded-full"></div>
-              <div className="w-2 h-2 bg-white/30 rounded-full"></div>
-              <div className="w-2 h-2 bg-white/30 rounded-full"></div>
             </div>
           </div>
         </motion.div>

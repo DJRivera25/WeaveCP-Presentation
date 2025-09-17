@@ -35,7 +35,7 @@ export default function HourlyRateSection() {
 
   return (
     <section className="py-6 sm:py-10 md:py-16 lg:py-20 bg-gray-50">
-      <div className="w-full mx-auto px-2 sm:px-4 md:px-6 lg:px-8">
+      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}

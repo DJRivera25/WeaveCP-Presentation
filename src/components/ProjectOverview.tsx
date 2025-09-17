@@ -52,7 +52,7 @@ export default function ProjectOverview() {
 
   return (
     <section className="py-6 sm:py-10 md:py-16 lg:py-20 bg-white">
-      <div className="w-full mx-auto px-2 sm:px-4 md:px-6 lg:px-8">
+      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -126,7 +126,7 @@ export default function ProjectOverview() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="mt-16 bg-gradient-to-r from-gray-50 to-blue-50 rounded-2xl p-8"
+          className="mt-16 bg-gradient-to-r from-gray-50 to-blue-50 rounded-2xl p-4 sm:p-6 md:p-8"
         >
           <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Built with Modern Technologies</h3>
           <div className="flex flex-wrap justify-center gap-4">

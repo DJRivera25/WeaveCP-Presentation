@@ -519,3 +519,4 @@ export const developmentPhases = [
 
 export const totalEstimatedHours = developmentPhases.reduce((total, phase) => total + phase.hours, 0);
 export const totalEstimatedWeeks = Math.ceil(totalEstimatedHours / 40); // Assuming 40 hours per week
+

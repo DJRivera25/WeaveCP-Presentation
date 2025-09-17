@@ -44,7 +44,7 @@ export default function HonestProjectStatus() {
 
   return (
     <section className="py-6 sm:py-8 md:py-12 lg:py-16 bg-gray-50">
-      <div className="w-full mx-auto px-2 sm:px-4 md:px-6 lg:px-8">
+      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -84,6 +84,32 @@ export default function HonestProjectStatus() {
               </ul>
             </motion.div>
           ))}
+        </div>
+
+        {/* Status Overview - Mobile */}
+        <div className="md:hidden mb-16">
+          <div className="space-y-4">
+            {statusCategories.map((category, index) => (
+              <motion.div
+                key={category.title}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="bg-white rounded-xl p-4 shadow-lg"
+              >
+                <h3 className="text-base font-bold text-gray-900 mb-3">{category.title}</h3>
+                <ul className="space-y-2">
+                  {category.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-start">
+                      <div className="w-1.5 h-1.5 bg-gray-400 rounded-full mr-2 mt-2 flex-shrink-0"></div>
+                      <span className="text-xs text-gray-700 leading-tight">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
+            ))}
+          </div>
         </div>
 
         {/* Bottom Line */}

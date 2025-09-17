@@ -11,7 +11,7 @@ export default function PricingSection() {
 
   return (
     <section className="py-8 sm:py-12 md:py-16 lg:py-20 bg-gray-50">
-      <div className="w-full mx-auto px-2 sm:px-4 md:px-6 lg:px-8">
+      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -64,9 +64,9 @@ export default function PricingSection() {
             ))}
           </div>
 
-          {/* Mobile Carousel */}
+          {/* Mobile Grid */}
           <div className="sm:hidden">
-            <div className="flex overflow-x-auto space-x-3 pb-4 scrollbar-hide px-2">
+            <div className="grid grid-cols-1 gap-2 px-2">
               {[
                 "Complete 9-page professional website",
                 "Full content management system",
@@ -78,7 +78,7 @@ export default function PricingSection() {
                 "Task management, time tracking, team management",
                 "1 month support and training (40 hours) included",
               ].map((item, index) => (
-                <div key={index} className="flex items-start text-green-100 flex-shrink-0 w-56">
+                <div key={index} className="flex items-start text-green-100">
                   <CheckIcon className="w-3 h-3 mr-2 flex-shrink-0 mt-0.5" />
                   <span className="text-xs leading-tight">{item}</span>
                 </div>

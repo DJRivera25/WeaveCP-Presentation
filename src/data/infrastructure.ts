@@ -306,3 +306,4 @@ export const technicalRequirements = {
     firstInputDelay: "< 100ms",
   },
 };
+

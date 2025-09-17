@@ -40,3 +40,4 @@ export function CompactCard({ title, description, icon, color = "bg-blue-500", i
     </motion.div>
   );
 }
+

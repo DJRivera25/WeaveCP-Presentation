@@ -45,7 +45,7 @@ export default function TechnicalStack() {
 
   return (
     <section className="py-6 sm:py-10 md:py-16 lg:py-20 bg-gray-50">
-      <div className="w-full mx-auto px-2 sm:px-4 md:px-6 lg:px-8">
+      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -103,6 +103,48 @@ export default function TechnicalStack() {
           ))}
         </div>
 
+        {/* Technology Stack - Mobile */}
+        <div className="md:hidden mb-16">
+          <div className="space-y-6">
+            {stackCategories.map((category, index) => (
+              <motion.div
+                key={category.title}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="bg-white rounded-xl p-4 shadow-lg"
+              >
+                <div className="flex items-center mb-4">
+                  <div
+                    className={`w-8 h-8 rounded-lg bg-gradient-to-r ${category.color} flex items-center justify-center mr-3`}
+                  >
+                    <category.icon className="w-4 h-4 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-base font-semibold text-gray-900">{category.title}</h3>
+                    <p className="text-xs text-gray-600 mt-1">{category.description}</p>
+                  </div>
+                </div>
+                <div className="flex flex-wrap gap-1">
+                  {category.technologies.map((tech, techIndex) => (
+                    <motion.span
+                      key={tech}
+                      initial={{ opacity: 0, scale: 0.8 }}
+                      whileInView={{ opacity: 1, scale: 1 }}
+                      transition={{ duration: 0.3, delay: techIndex * 0.05 }}
+                      viewport={{ once: true }}
+                      className="px-2 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-medium"
+                    >
+                      {tech}
+                    </motion.span>
+                  ))}
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+
         {/* API Endpoints Overview */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -158,17 +200,17 @@ export default function TechnicalStack() {
             ))}
           </div>
 
-          {/* Mobile API Carousel */}
+          {/* Mobile API Grid */}
           <div className="md:hidden">
-            <div className="flex overflow-x-auto space-x-3 pb-4 scrollbar-hide px-2">
-              {apiEndpoints.slice(0, 12).map((endpoint, index) => (
+            <div className="grid grid-cols-1 gap-3">
+              {apiEndpoints.slice(0, 8).map((endpoint, index) => (
                 <motion.div
                   key={endpoint.endpoint}
-                  initial={{ opacity: 0, x: 30 }}
-                  whileInView={{ opacity: 1, x: 0 }}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.05 }}
                   viewport={{ once: true }}
-                  className="border border-gray-200 rounded-lg p-3 flex-shrink-0 w-48"
+                  className="border border-gray-200 rounded-lg p-3"
                 >
                   <div className="flex items-center justify-between mb-2">
                     <span className="text-xs font-mono text-indigo-600 bg-indigo-50 px-1 py-0.5 rounded">
@@ -179,13 +221,13 @@ export default function TechnicalStack() {
                   <h4 className="text-xs font-semibold text-gray-900 mb-1">{endpoint.endpoint}</h4>
                   <p className="text-xs text-gray-600 mb-2 leading-tight">{endpoint.description}</p>
                   <div className="flex flex-wrap gap-1">
-                    {endpoint.features.slice(0, 1).map((feature) => (
+                    {endpoint.features.slice(0, 2).map((feature) => (
                       <span key={feature} className="text-xs bg-gray-100 text-gray-600 px-1 py-0.5 rounded">
                         {feature}
                       </span>
                     ))}
-                    {endpoint.features.length > 1 && (
-                      <span className="text-xs text-gray-400">+{endpoint.features.length - 1}</span>
+                    {endpoint.features.length > 2 && (
+                      <span className="text-xs text-gray-400">+{endpoint.features.length - 2}</span>
                     )}
                   </div>
                 </motion.div>

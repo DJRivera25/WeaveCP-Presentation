@@ -289,3 +289,4 @@ export const honestAssessment = {
   timeToPolish: "2-4 weeks of focused UI/UX work",
   currentValue: "Fully functional system with room for enhancement",
 };
+
